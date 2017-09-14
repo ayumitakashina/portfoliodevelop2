@@ -1,9 +1,15 @@
-<h1>Overallconfigs#index</h1>
-<p>Find me in app/views/overallconfigs/index.html.erb</p>
+<% @overallconfig.each do |o| %>
+ <h1><%= o.title %></h1>
+<% end %>
 
+<% @artistname.each do |a| %> 
+ <nav><%= a.name %>
+<% end %>
 <% @musictitle.each do |m| %> 
- <%= link_to m.video_url.to_s do %>
+ <p><%= m.title %>
+   <%= link_to m.video_url.to_s do %>
    <%= image_tag(m.video_url(:screenshot).to_s, id: "video", :alt => "screenshot") %>
-<% end %> 
+<% end %></p>
+<hr> 
 
 <% end %>
