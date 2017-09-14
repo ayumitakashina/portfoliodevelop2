@@ -1,0 +1,9 @@
+<h1>Overallconfigs#index</h1>
+<p>Find me in app/views/overallconfigs/index.html.erb</p>
+
+<% @musictitle.each do |m| %> 
+ <%= link_to m.video_url.to_s do %>
+   <%= image_tag(m.video_url(:screenshot).to_s, id: "video", :alt => "screenshot") %>
+<% end %> 
+
+<% end %>
