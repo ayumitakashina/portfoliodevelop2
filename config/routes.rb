@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   resources :music_titles
+  resources :albumnames
   get 'albumnames/index'
 
   get 'albumnames/show'

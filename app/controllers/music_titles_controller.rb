@@ -1,15 +1,17 @@
 class MusicTitlesController < ApplicationController
-  before_action :set_music_title, only: [:show, :edit, :update, :destroy]
+  #before_action :set_music_title, only: [:show, :edit, :update, :destroy]
 
   # GET /music_titles
   # GET /music_titles.json
   def index
-    @music_titles = MusicTitle.all
+    #@music_title = MusicTitle.where('albumname_id = ?', params[:id])
   end
 
   # GET /music_titles/1
   # GET /music_titles/1.json
   def show
+     @music_title = MusicTitle.where('albumname_id = ?', params[:id])
+
   end
 
   # GET /music_titles/new

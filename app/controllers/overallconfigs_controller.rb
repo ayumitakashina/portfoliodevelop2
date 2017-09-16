@@ -1,6 +1,6 @@
 class OverallconfigsController < ApplicationController
   def index
-   @musictitle = MusicTitle.all
+   @musictitle = MusicTitle.page(params[:page])
    @artistname = ArtistName.all
    @overallconfig = OverAllConfig.all   
   end
