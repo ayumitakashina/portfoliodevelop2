@@ -1,6 +1,11 @@
 Rails.application.routes.draw do
   resources :music_titles
   resources :albumnames
+  
+  get 'category/:id' => 'overallconfigs#category'
+  
+  get 'musictitle/:id' => 'overallconfigs#musictitle'
+
   get 'albumnames/index'
 
   get 'albumnames/show'
